@@ -25,7 +25,7 @@ body {
     height: 16px;
     object-fit: contain;
     transition: transform 0.2s;
-    vertical-align: middle
+    vertical-align: middle;
 }
 .top-social a:hover img {
     transform: scale(1.15);
@@ -146,8 +146,10 @@ textarea.input-line {
 
 /* Button similar to image */
 .btn-submit {
-  display: inline-block;
-  padding: 12px 28px;
+  display: block;
+  width: fit-content;
+  margin: 1.5em auto;
+  padding: 15px 30px;
   border-radius: 6px;
   border: 1px solid rgba(47,47,47,0.18);
   background: transparent;
@@ -157,6 +159,7 @@ textarea.input-line {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.15s, transform 0.08s, box-shadow 0.12s;
+  text-align: center;
 }
 
 .btn-submit:hover {
@@ -270,10 +273,10 @@ textarea.input-line {
   }
   
   .btn-submit {
-    padding: 15px 30px;
-    font-size: 16px;
+    display: block;
     width: 100%;
-    margin-top: 1.5em;
+    padding: 15px 30px;
+    margin: 1.5em auto;
   }
   
   footer {
@@ -282,7 +285,7 @@ textarea.input-line {
     padding: 1.5em 0;
     background: #EDE7E1;
   }
-  
+
   input[type="date"].input-line {
     text-align: left;
     padding-left: 0;
