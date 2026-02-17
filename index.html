@@ -1,10 +1,93 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Yulia Colta</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <p>IN CONSTRUCTION</p>
-    </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yulia Bridal</title>
+    <link rel="icon" class="site-logo" type="image/png" href="images/LogoSH.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="home">
+    </header>
+    <div class="top-social">
+        <a href="https://www.instagram.com/yuliacolta/" target="_blank" title="Instagram">
+            <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/0695239338/" target="_blank" title="WhatsApp">
+            <img src="images/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/yulia.marinina.leclatparis/" target="_blank" title="Facebook">
+            <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.tiktok.com/@yuliacolta/" target="_blank" title="TikTok">
+            <img src="images/tiktok.png" alt="TikTok">
+        </a>
+    </div>
+
+  
+    <section id="contact" class="contact-section">
+  <h2>CONTACT</h2>
+
+  <form id="quote-form" class="contact-form" action="https://formspree.io/f/mrboneag" method="POST">
+    <!-- Remplace YOUR_FORMSPREE_ENDPOINT par ton endpoint Formspree -->
+
+    <div class="form-row">
+      <label for="first_name">First name*</label>
+      <input id="first_name" name="first_name" type="text" class="input-line" placeholder="" required>
+    </div>
+
+    <div class="form-row">
+      <label for="last_name">Last name*</label>
+      <input id="last_name" name="last_name" type="text" class="input-line" placeholder="" required>
+    </div>
+
+    <div class="form-row">
+      <label for="email">Email*</label>
+      <input id="email" name="email" type="email" class="input-line" placeholder="" required>
+    </div>
+
+    <div class="form-row">
+      <label for="date">Event date (DD/MM/YYYY)*</label>
+      <input id="date" name="date" type="date" class="input-line" required>
+    </div>
+
+    <div class="form-row">
+      <label for="phone">Phone number*</label>
+      <input id="phone" name="phone" type="tel" class="input-line" placeholder="" required>
+    </div>
+
+    <div class="form-row">
+      <label for="venue">Event venue*</label>
+      <input id="venue" name="venue" type="text" class="input-line" placeholder="" required>
+    </div>
+
+    <div class="form-row">
+      <label for="photographer">Who is your photographer/wedding planner?</label>
+      <input id="photographer" name="photographer" type="text" class="input-line" placeholder="">
+    </div>
+
+    <div class="form-row full">
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" class="input-line" rows="1" required></textarea>
+    </div>
+
+    <!-- Honeypot anti-spam -->
+    <input type="text" name="_honey" style="display:none">
+
+    <!-- Options Formspree -->
+    <input type="hidden" name="_subject" value="Demande de devis - Yulia Colta">
+    <input type="hidden" name="_language" value="en">
+
+    <div class="form-row full">
+      <button type="submit" class="btn-submit">Send</button>
+    </div>
+
+    <p class="form-status" aria-live="polite" style="display:none"></p>
+  </form>
+</section>
+
+    <footer>
+        <p>&copy; 2025 Yulia Bridal - Coiffure & Maquillage</p>
+    </footer>
+</body>
 </html>
