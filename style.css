@@ -1,80 +1,222 @@
-/* Complete CSS including responsive design */
-
 body {
-    /* Original body styles here */
+    font-family: Arial, sans-serif;
+    background: #FAF8F6;
+    color: #2F2F2F;
+    margin: 0;
+    padding: 0;
 }
-
-.site-logo {
-    /* Original site-logo styles here */
+.site-logo img {
+    height: 150px;
+    width: 150px;
 }
-
-.logo {
-    /* Original logo styles here */
+.logo img{
+    mix-blend-mode: multiply;
+    position: relative;
+    z-index: 2;
 }
-
 .top-social {
-    /* Original top-social styles here */
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 0.7em 0 0.7em 0;
 }
-
+.top-social a img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    transition: transform 0.2s;
+    vertical-align: middle
+}
+.top-social a:hover img {
+    transform: scale(1.15);
+    filter: brightness(1.1) drop-shadow(0 0 4px #E4D5CE);
+}
 header {
+    background-image: url('images/bground.png');
+    background-size: cover;
+    background-position: 50% 20%;
+    color: #2F2F2F;
     padding-top: 26em;
+    text-align: center;
+    border-bottom: 3px solid #D9C8B4;
 }
-
 nav ul {
-    /* Original nav ul styles here */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
 }
-
-h2 {
-    /* Original h2 styles here */
+h2{
+    text-align: center;
+    color:#2F2F2F;
+    margin-top: 1em;
+    font-family: 'antic-didone';
 }
 
 nav a {
-    /* Original nav a styles here */
+    color: #2F2F2F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
 }
-
+nav a:hover {
+    color: #D9C8B4;
+    text-decoration: underline;
+}
 footer {
-    /* Original footer styles here */
+    font-family: baskerville-display;
+    text-align: center;
+    padding: 1em 0;
+    background: #EDE7E1;
+    color: #2F2F2F;
+    margin-top: 2em;
+    border-top: 3px solid #D9C8B4;
 }
-
+/* Formulaire style "ligne sous champ" minimaliste */
+section#contact,
 .contact-section {
-    /* Original contact-section styles here */
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  max-width: 640px;
+  margin: 3rem auto;
 }
 
+/* Form layout */
 .contact-form {
-    /* Original contact-form styles here */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem; 
 }
 
-.form-label {
-    /* Original form label styles here */
+
+/* Label style like in the image */
+.contact-form label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: #6b6b6b;
+  margin-bottom: 6px;
 }
 
+/* Input/textarea line style */
 .input-line {
-    /* Original input-line styles here */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;   
+  padding: 8px 0;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  border-bottom: 1px solid rgba(47,47,47,0.25);
+  background: transparent;
 }
 
-textarea {
-    /* Original textarea styles here */
+/* Remove native inner shadow on iOS */
+.input-line::-webkit-inner-spin-button,
+.input-line::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.form-row {
-    /* Original form-row styles here */
+/* Placeholder subtle */
+.input-line::placeholder {
+  color: rgba(47,47,47,0.35);
 }
 
-button {
-    /* Original button styles here */
+/* Focus effect */
+.input-line:focus {
+  border-bottom-color: #D9C8B4; /* accent color */
+  box-shadow: 0 2px 6px rgba(217,200,180,0.2);
 }
 
-/* Responsive Styles */
+/* Make the textarea look like lines too */
+textarea.input-line {
+  min-height: 100px;
+  resize: vertical;
+  padding-bottom: 14px;
+}
+
+/* Full width rows (message, button) */
+.form-row.full { margin-top: 0.4rem; }
+
+/* Button similar to image */
+.btn-submit {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(47,47,47,0.18);
+  background: transparent;
+  color: #2F2F2F;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.08s, box-shadow 0.12s;
+}
+
+.btn-submit:hover {
+  background: rgba(217,200,180,0.06);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+}
+
+.form-status {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #2F2F2F;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        padding-top: 14em;
-    }
-    /* Include other responsive styles for tablets here */
+  header {
+    padding-top: 14em;
+  }
+  nav ul {
+    gap: 1em;
+  }
+  .contact-form label {
+    font-size: 0.6rem;
+  }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding-top: 10em;
-    }
-    /* Include other responsive styles for mobile here */
+  header {
+    padding-top: 10em;
+  }
+  nav ul {
+    gap: 0.5em;
+    flex-direction: column;
+  }
+  .site-logo img {
+    height: 80px;
+    width: 80px;
+  }
+  .top-social {
+    gap: 1em;
+  }
+  .contact-section {
+    margin: 1rem auto;
+  }
+  .contact-form {
+    padding: 0.3rem;
+  }
+  .contact-form label {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+  }
+  .input-line {
+    padding: 6px 0;
+  }
+  textarea.input-line {
+    min-height: 80px;
+  }
+  .btn-submit {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
