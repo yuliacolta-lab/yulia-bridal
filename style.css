@@ -180,43 +180,100 @@ textarea.input-line {
     gap: 1em;
   }
   .contact-form label {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+  }
+  .input-line {
+    padding: 12px 0;
+    font-size: 16px;
+  }
+  .contact-form {
+    padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
   header {
     padding-top: 10em;
   }
+  
   nav ul {
-    gap: 0.5em;
-    flex-direction: column;
+    gap: 0.8em;
+    flex-wrap: wrap;
   }
+  
+  nav a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
   .site-logo img {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
   }
+  
   .top-social {
-    gap: 1em;
+    gap: 1.5em;
+    padding: 1em 0;
   }
+  
+  .top-social a img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  section#contact,
   .contact-section {
-    margin: 1rem auto;
+    margin: 2rem auto;
+    flex: 1;
   }
+  
+  h2 {
+    font-size: 22px;
+    margin-top: 1.5em;
+  }
+  
   .contact-form {
-    padding: 0.3rem;
+    padding: 1.5rem;
   }
+  
   .contact-form label {
-    font-size: 0.55rem;
-    letter-spacing: 1px;
+    font-size: 0.7rem;
+    margin-bottom: 8px;
   }
+  
+  .form-row {
+    margin-bottom: 1.5em;
+  }
+  
   .input-line {
-    padding: 6px 0;
+    padding: 15px 0;
+    font-size: 16px;
+    min-height: 40px;
   }
+  
   textarea.input-line {
-    min-height: 80px;
+    min-height: 100px;
+    font-size: 16px;
   }
+  
   .btn-submit {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 1.5em;
+  }
+  
+  footer {
+    margin-top: auto;
+    padding: 1.5em 0;
   }
 }
